@@ -110,3 +110,9 @@ environments:
                 testOnReturn: false
                 jdbcInterceptors: ConnectionState
                 defaultTransactionIsolation: 2 # TRANSACTION_READ_COMMITTED
+# hbk
+grails:
+    mongodb:
+        host: localhost
+        port: 27017
+        databaseName: "hkdbname180530"

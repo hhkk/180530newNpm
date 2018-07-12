@@ -5,16 +5,25 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { IndexComponent } from './index/index.component';
 import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { NavService } from './nav/nav.service';
+//import { NavComponent } from './nav/nav.component';
+//import { NavService } from './nav/nav.service';
 import { AppRoutingModule } from "./app-routing.module";
 import { HttpClientModule } from "@angular/common/http";
+import { CustomerComponent } from './customer/customer.component';
+import { CustomerCreateComponent } from './customer-create/customer-create.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
+import { CustomerEditComponent } from './customer-edit/customer-edit.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavComponent,
-    IndexComponent
+   // NavComponent,
+    IndexComponent,
+    CustomerComponent,
+    CustomerCreateComponent,
+    CustomerDetailComponent,
+    CustomerEditComponent
   ],
   imports: [
     BrowserModule,
@@ -23,7 +32,8 @@ import { HttpClientModule } from "@angular/common/http";
     AppRoutingModule,
     NgbModule.forRoot()
   ],
-  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, NavService],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
+  //providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}, NavService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
