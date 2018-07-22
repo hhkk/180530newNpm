@@ -21,6 +21,13 @@ export class CustomerComponent implements OnInit {
 // see /Users/hkon/utdObsolete/180409/grails-angular/client/src/app/app-routing.module.ts
     ngOnInit() {
         this.http.get('http://localhost:8080/customer').subscribe(data => {
+
+            async function demo() {
+                console.log('Taking a break...');
+                await sleep(2000);
+                console.log('Two second later');
+            }
+
             this.customers = data;
         });
     }
