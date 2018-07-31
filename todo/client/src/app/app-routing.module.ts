@@ -6,6 +6,8 @@ import { CustomerCreateComponent } from "./customer-create/customer-create.compo
 import { CustomerDetailComponent } from "./customer-detail/customer-detail.component";
 import { CustomerEditComponent } from "./customer-edit/customer-edit.component";
 
+console.log("=== hbk ===== in /Users/hkon/utd/180530newNpm/todo/client/src/app/app-routing.module.ts ");
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'index', pathMatch: 'full'},
